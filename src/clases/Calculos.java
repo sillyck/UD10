@@ -17,8 +17,10 @@ public class Calculos {
 		case "+":
 			String calculoString = JOptionPane.showInputDialog("Cuantos numeros calcularas: ");
 			calculo = Double.parseDouble(calculoString);
+			//Hacemos un for para recorres cuantos numeros queremos sumas, lo mismo hacemos con la division y la multiplicacion
 			for (int i = 0; i < calculo; i++) {
 				try {
+					//Pedimos el numero que queremos calcular
 					numString = JOptionPane.showInputDialog("Escribe un numero a calcular:");
 					num = Double.parseDouble(numString);
 					resultado += num;
