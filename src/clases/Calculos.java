@@ -12,6 +12,7 @@ public class Calculos {
 		double calculo = 0;
 		String numString="";
 		String op = JOptionPane.showInputDialog("Escribe que operacion quieres hacer:");
+		//Hacemos un switch para coger que operacion queremos hacer
 		switch (op) {
 		case "+":
 			String calculoString = JOptionPane.showInputDialog("Cuantos numeros calcularas: ");
@@ -21,11 +22,11 @@ public class Calculos {
 					numString = JOptionPane.showInputDialog("Escribe un numero a calcular:");
 					num = Double.parseDouble(numString);
 					resultado += num;
-				}catch(NumberFormatException nonumero) {
+				}catch(NumberFormatException nonumero) {//Si el campo esta vacio, indicara un error
 					System.out.println("Te falta indicar un numero");
 				}
 			}
-				if(numString != null) {
+				if(numString != null) {//Si el campo esta lleno, mostrara el resultado
 					JOptionPane.showMessageDialog(null, resultado);
 				}
 
@@ -72,10 +73,11 @@ public class Calculos {
 					if(numString != null && numString2 != null && num !=0 && num2!=0) {
 						JOptionPane.showMessageDialog(null, resultado);
 					}else if(num ==0 || num2==0){
+						//Si uno de los dos campos son 0, lanzara una excepcion (ArithmeticException), no se podra dividir entre 0
 						throw new ArithmeticException("No se puede dividir por 0");
 					}
 				}catch(ArithmeticException e) {
-					System.out.println(e.getMessage());
+					System.out.println(e.getMessage());//Mostramos la excepcion de dividir entre 0
 				}catch(NumberFormatException nonumero) {
 					System.out.println("Te falta indicar un numero");
 				}
