@@ -1,3 +1,6 @@
+/**
+ * @author Eloy
+ */
 package app;
 
 import clases.Random;

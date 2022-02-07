@@ -1,3 +1,6 @@
+/**
+ * @author Eloy
+ */
 package clases;
 import java.lang.Math;
 public class Random {
